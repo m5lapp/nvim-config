@@ -3,12 +3,13 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local opts = {
   sources = {
+    -- If changing any packages here, be sure to ensure that they get installed
+    -- by mason.nvim in the custom/plugins.lua file and run :MasonInstallAll.
+
     null_ls.builtins.formatting.gofmt,
-    -- If using gofumpt ober gofmt, be sure to `go get` the latest version.
     --null_ls.builtins.formatting.gofumpt,
 
     null_ls.builtins.formatting.goimports,
-    -- If using goimports_reviser instead of goimports, be sure to `go get` it.
     --null_ls.builtins.formatting.goimports_reviser,
 
     -- golines shortens long lines where possible.
