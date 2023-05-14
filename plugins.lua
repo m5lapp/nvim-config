@@ -16,6 +16,9 @@ local plugins = {
   },
 
   {
+    -- Any packages listed here can be installed with :MasonInstallAll. :Mason
+    -- can be used to list all the available packages.
+    -- https://nvchad.com/docs/config/lsp#mason_nvim
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -37,6 +40,11 @@ local plugins = {
   },
 
   {
+    "airblade/vim-gitgutter",
+    lazy = false,
+  },
+
+  {
     "jose-elias-alvarez/null-ls.nvim",
     ft = "go",
     opts = function()
@@ -55,5 +63,6 @@ local plugins = {
     end,
   },
 }
+
 return plugins
 

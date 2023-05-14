@@ -4,6 +4,8 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 local util = require "lspconfig/util"
 
+-- For multiple LSPs, they can be set up in a loop as described at:
+-- --https://nvchad.com/docs/config/lsp
 lspconfig.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
